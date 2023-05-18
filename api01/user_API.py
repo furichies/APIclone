@@ -9,12 +9,12 @@ def get_user_info(username):
     passwd_output = passwd_output.decode('utf-8').strip()
     passwd_fields = passwd_output.split(':')
     return jsonify({
-        'username': passwd_fields[0],
+        'nombre': passwd_fields[0],
         'password': passwd_fields[1],
         'uid': passwd_fields[2],
         'gid': passwd_fields[3],
-        'gecos': passwd_fields[4],
-        'home_directory': passwd_fields[5],
+        'notas': passwd_fields[4],
+        'home': passwd_fields[5],
         'shell': passwd_fields[6]
     })
 
